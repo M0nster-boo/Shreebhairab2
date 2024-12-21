@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import Button from '../ui/Button';
 import GalleryModal from './GalleryModal';
+import Image from '../common/Image';
 
 export default function GalleryGrid() {
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
@@ -9,44 +10,13 @@ export default function GalleryGrid() {
   const allImages = [
     {
       src: '/images/gallery/1.jpg',
-      alt: 'Group Photo'
+      alt: 'Studio Session'
     },
     {
       src: '/images/gallery/2.jpg',
-      alt: 'Live Show'
+      alt: 'Live Performance'
     },
-    {
-      src: '/images/gallery/3.jpg',
-      alt: 'Rehearsal'
-    },
-    {
-      src: '/images/gallery/4.jpg',
-      alt: 'Backstage'
-    },
-    {
-      src: '/images/gallery/5.jpg',
-      alt: 'Live performance'
-    },
-    {
-      src: '/images/gallery/6.jpg',
-      alt: 'Recording Session'
-    },
-    {
-      src: '/images/gallery/7.jpg',
-      alt: 'Orchestra Practice'
-    },
-    {
-      src: '/images/gallery/8.jpg',
-      alt: 'Summer Concert'
-    },
-     {
-      src: '/images/gallery/9.jpg',
-      alt: 'Summer Concert'
-    },
-    {
-      src: '/images/gallery/10.jpg',
-      alt: 'Music Festival'
-    }
+    // ... other images
   ];
 
   const displayedImages = showAll ? allImages : allImages.slice(0, 6);
@@ -60,7 +30,7 @@ export default function GalleryGrid() {
             className="relative overflow-hidden rounded-lg cursor-pointer group"
             onClick={() => setSelectedImage(image.src)}
           >
-            <img 
+            <Image 
               src={image.src}
               alt={image.alt}
               className="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-110"
