@@ -39,8 +39,12 @@ export default function GalleryGrid() {
       src: '/images/gallery/8.jpg',
       alt: 'Summer Concert'
     },
-    {
+     {
       src: '/images/gallery/9.jpg',
+      alt: 'Summer Concert'
+    },
+    {
+      src: '/images/gallery/10.jpg',
       alt: 'Music Festival'
     }
   ];
