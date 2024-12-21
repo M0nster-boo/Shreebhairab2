@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
+import Image from '../common/Image';
 
 export default function MemberSlider() {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -11,42 +12,7 @@ export default function MemberSlider() {
       image: "/images/members/member1.jpg",
       bio: "A classically trained pianist with a passion for blending traditional and contemporary styles."
     },
-     {
-      name: "David Chen",
-      role: "Piano & Composition",
-      image: "/images/members/member1.jpg",
-      bio: "A classically trained pianist with a passion for blending traditional and contemporary styles."
-    },
-    {
-      name: "Sarah Williams",
-      role: "Violin",
-      image: "/images/members/member2.jpg",
-      bio: "Virtuoso violinist bringing emotional depth and technical precision to every performance."
-    },
-    {
-      name: "Marcus Rodriguez",
-      role: "Percussion",
-      image: "/images/members/member3.jpg",
-      bio: "Innovative percussionist exploring rhythmic boundaries and world music influences."
-    },
-    {
-      name: "Emily Zhang",
-      role: "Cello",
-      image: "/images/members/member4.jpg",
-      bio: "Award-winning cellist known for her expressive playing and innovative techniques."
-    },
-    {
-      name: "Michael Brown",
-      role: "Bass",
-      image: "/images/members/member5.jpg",
-      bio: "Versatile bassist bridging classical and contemporary styles with precision."
-    },
-    {
-      name: "Lisa Anderson",
-      role: "Flute",
-      image: "/images/members/member6.jpg",
-      bio: "Renowned flutist bringing ethereal melodies and technical mastery to every performance."
-    }
+    // ... other members
   ];
 
   const nextSlide = () => setCurrentIndex((prev) => (prev + 1) % members.length);
@@ -55,7 +21,7 @@ export default function MemberSlider() {
   return (
     <div className="relative max-w-4xl mx-auto mb-16">
       <div className="bg-white rounded-lg shadow-lg overflow-hidden">
-        <img 
+        <Image 
           src={members[currentIndex].image}
           alt={members[currentIndex].name}
           className="w-full h-96 object-cover"
