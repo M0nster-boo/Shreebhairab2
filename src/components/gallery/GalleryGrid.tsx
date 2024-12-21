@@ -25,7 +25,7 @@ export default function GalleryGrid() {
     },
     {
       src: '/images/gallery/5.jpg',
-      alt: 'Live Show'
+      alt: 'Live performance'
     },
     {
       src: '/images/gallery/6.jpg',
