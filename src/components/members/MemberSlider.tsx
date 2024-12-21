@@ -11,6 +11,12 @@ export default function MemberSlider() {
       image: "/images/members/member1.jpg",
       bio: "A classically trained pianist with a passion for blending traditional and contemporary styles."
     },
+     {
+      name: "David Chen",
+      role: "Piano & Composition",
+      image: "/images/members/member1.jpg",
+      bio: "A classically trained pianist with a passion for blending traditional and contemporary styles."
+    },
     {
       name: "Sarah Williams",
       role: "Violin",
