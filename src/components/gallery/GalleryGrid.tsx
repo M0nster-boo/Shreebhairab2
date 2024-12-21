@@ -9,11 +9,11 @@ export default function GalleryGrid() {
   const allImages = [
     {
       src: '/images/gallery/1.jpg',
-      alt: 'Studio Session'
+      alt: 'Group Photo'
     },
     {
       src: '/images/gallery/2.jpg',
-      alt: 'Live Performance'
+      alt: 'Live Show'
     },
     {
       src: '/images/gallery/3.jpg',
