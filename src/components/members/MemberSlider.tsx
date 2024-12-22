@@ -1,19 +1,11 @@
 import { useState } from 'react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 import Image from '../common/Image';
+import { images } from '../../data/images';
 
 export default function MemberSlider() {
   const [currentIndex, setCurrentIndex] = useState(0);
-
-  const members = [
-    {
-      name: "David Chen",
-      role: "Piano & Composition",
-      image: "/images/members/member1.jpg",
-      bio: "A classically trained pianist with a passion for blending traditional and contemporary styles."
-    },
-    // ... other members
-  ];
+  const members = images.members;
 
   const nextSlide = () => setCurrentIndex((prev) => (prev + 1) % members.length);
   const prevSlide = () => setCurrentIndex((prev) => (prev - 1 + members.length) % members.length);
@@ -22,7 +14,7 @@ export default function MemberSlider() {
     <div className="relative max-w-4xl mx-auto mb-16">
       <div className="bg-white rounded-lg shadow-lg overflow-hidden">
         <Image 
-          src={members[currentIndex].image}
+          src={members[currentIndex].url}
           alt={members[currentIndex].name}
           className="w-full h-96 object-cover"
         />
